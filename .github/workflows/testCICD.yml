@@ -14,6 +14,7 @@ jobs: # job to excecute?
     - name: Print hello
       run: | #run terminal command
         ls
+        pwd
         echo Hello!!
         
     - name: Setup Go
@@ -31,5 +32,6 @@ jobs: # job to excecute?
       
     - name: Install dependencies
       run: |
-        go get github.com/franela/goblin
+        go mod init calc
+        go mod tidy
         go test -v
