@@ -17,6 +17,13 @@ jobs: # job to excecute?
         pwd
         echo Hello!!
         
+    - name: whatsapp-notify
+      uses: kaviadigdarshan/whatsapp-actions@main
+      env:
+        ACCOUNT_SID: ${{ secrets.ACCOUNT_SID }}
+        AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
+        TO_WHATSAPP_NUMBER: ${{ secrets.TO_WHATSAPP_NUMBER }}
+        
     - name: Setup Go
       uses: actions/setup-go@v3.2.0
       with:
