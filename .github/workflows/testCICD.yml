@@ -47,7 +47,7 @@ jobs: # job to excecute?
       run: |
         go mod init calc
         go mod tidy
-        go get github.com/tebeka/go2xunit@latest
+        go install github.com/tebeka/go2xunit@latest
         go test -v
         go test -v | go2xunit > tests.xml
         
