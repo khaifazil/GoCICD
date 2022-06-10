@@ -10,10 +10,12 @@ jobs: # job to excecute?
     name: Load OS # name for printing
     runs-on: ubuntu-latest #specify os in virtual machine
     steps:
+    
     - name: Print hello
       run: | #run terminal command
         ls
         echo Hello!!
+        
     - name: Setup Go
       uses: actions/setup-go@v3.2.0
       with:
@@ -26,3 +28,8 @@ jobs: # job to excecute?
       
     - name: Check File System
       run: ls
+      
+    - name: Install dependencies
+      run: |
+        go get github.com/franela/goblin
+        go test -v
