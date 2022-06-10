@@ -1,5 +1,9 @@
 package calc
 
+func main() {
+	fmt.Println(add(1,2))
+}
+
 // Add two numbers and return the result.
 func Add(val1, val2 int) int {
 	return val1 + val2
