@@ -37,7 +37,7 @@ jobs: # job to excecute?
       run: |
         cd remote
         ls
-        cat mytext.txt
+        cat myText.txt
         cd ..
         
     - name: Check File System
