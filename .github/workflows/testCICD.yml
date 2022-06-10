@@ -27,6 +27,19 @@ jobs: # job to excecute?
     - name: checkout Repo
       uses: actions/checkout@v2.4.2
       
+    - name: Checkout remote private repo
+      uses: actions/checkout@v2.4.2
+      with:
+        repository: lowkh2/GoSchoolRemoteExample
+        token: ${{secret.GO_SECRET}}
+        path: remote
+    - name: Check remote files
+      run: |
+        cd remote
+        ls
+        cat mytext.txt
+        cd ..
+        
     - name: Check File System
       run: ls
       
