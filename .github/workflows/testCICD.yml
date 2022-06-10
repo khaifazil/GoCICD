@@ -49,7 +49,7 @@ jobs: # job to excecute?
         go mod tidy
         go get github.com/tebeka/go2xunit@latest
         go test -v
-        go test -v | go2xunit -output tests.xml
+        go test -v | go2xunit > tests.xml
         
     - name: Publish Test Results
       uses: EnricoMi/publish-unit-test-result-action@v1
