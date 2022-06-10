@@ -31,7 +31,7 @@ jobs: # job to excecute?
       uses: actions/checkout@v2.4.2
       with:
         repository: lowkh2/GoSchoolRemoteExample
-        token: ${{secret.GO_SECRET}}
+        token: ${{secrets.GO_SECRET}}
         path: remote
     - name: Check remote files
       run: |
